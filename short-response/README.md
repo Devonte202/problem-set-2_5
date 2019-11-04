@@ -19,7 +19,7 @@ array isn't copied into both arrays, instead they both reference the same set of
 
 
 **2. What does it mean to _destructure_ a JavaScript array? How do we use the _spread operator_ for destructuring. Be sure to include a code snippet to illustrate your response.**
-
+f
 
 **3. What is the purpose of _rest parameters_? How do we use them? Use a code snippet to illustrate your response. Lastly, explain how do they differ from the `arguments` object?**
 
@@ -27,10 +27,12 @@ Rest parameters allow one to accept several instances of data into one function 
 
 Ex.
 const newFunction = function(parameterOne, parameterTwo, ...restParameter){
-  return  parameterOne - parameterTwo + ...restParameter;
+  return  parameterOne - parameterTwo + restParameter;
 }
 
 newFunction (3, 2, 5, 7, 10);
 
-The code above will return 3-2 + 5+7+10
+The code above will return (3 - 2) + '5,7,10', because the rest parameter takes everything after the first two parameters and joins them together 
+into one string, which in theory means you can have an indefinite amount of them. Meanwhile the `arguments` object which consists of the values passed 
+when the function is invoked are limited to the amount of parameters the function can take.
 

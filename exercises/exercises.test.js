@@ -102,8 +102,8 @@ test('Question 12: spliceForReal', () => {
   const days = ['sun', 'thur', 'fri', 'sat'];
   expect(exercises.spliceForReal(days, 1, 0, 'mon', 'tues', 'wed')).toEqual([]);
 
-  //exercises.spliceForReal(days, 1, 0, 'mon', 'tues', 'wed');
-  //expect(days).toEqual(['sun', 'mon', 'tues', 'wed', 'thur', 'fri', 'sat']);
+  exercises.spliceForReal(days, 1, 0, 'mon', 'tues', 'wed');
+  expect(days).toEqual(['sun', 'mon', 'tues', 'wed', 'thur', 'fri', 'sat']);
 });
 
 // Question 13
